@@ -6,9 +6,13 @@ output: html_document
 ---
 
 ## Merging data
-
-```{r load_raw_datasets}
+# Specify your dataset location
+```{r data_folder}
 dataset_folder <- file.path("./../dataset/")
+```
+
+```{r load_raw_datasets, eval=FALSE}
+# Enable eval if needed
 
 # *.txt
 covariates <- read.table(file.path(dataset_folder,"Covariates.txt"))
@@ -27,11 +31,16 @@ saveRDS(object = raw_data,file = file.path(dataset_folder,"raw_data.rds"))
 ```
 
 ```{r preprocess_data}
+raw_data = readRDS(file.path(dataset_folder,"raw_data.rds"))
+names(raw_data)
+
 # removing NA (30%)
 ```
 
 ```{r exploring_dataset}
-# 
+#
+#
+#
 ```
 
 
