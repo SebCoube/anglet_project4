@@ -19,5 +19,19 @@ proteins <- read.table(file.path(dataset_folder,"Proteins.txt"))
 # *.rds
 methylation <- readRDS(file.path(dataset_folder,"Methylation.rds"))
 transcripts <- readRDS(file.path(dataset_folder,"Transcripts.rds"))
+raw_data <- list(covariates=covariates,exposures=exposures,metabolities=metabolities,
+                 methylation=methylation,proteins=proteins,transcripts=transcripts)
+
+# Save everything in one .rds file
+saveRDS(object = raw_data,file = file.path(dataset_folder,"raw_data.rds"))
 ```
+
+```{r preprocess_data}
+# removing NA (30%)
+```
+
+```{r exploring_dataset}
+# 
+```
+
 

@@ -4,3 +4,4 @@
 .Ruserdata
 dataset/*
 bash.exe.stackdump
+*.rds
