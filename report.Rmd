@@ -5,4 +5,19 @@ date: '25/06/2018 '
 output: html_document
 ---
 
+## Merging data
+
+```{r load_raw_datasets}
+dataset_folder <- file.path("./../dataset/")
+
+# *.txt
+covariates <- read.table(file.path(dataset_folder,"Covariates.txt"))
+exposures <- read.table(file.path(dataset_folder,"Exposures.txt"))
+metabolities <- read.table(file.path(dataset_folder,"Metabolites.txt"))
+proteins <- read.table(file.path(dataset_folder,"Proteins.txt"))
+
+# *.rds
+methylation <- readRDS(file.path(dataset_folder,"Methylation.rds"))
+transcripts <- readRDS(file.path(dataset_folder,"Transcripts.rds"))
+```
 
