@@ -37,6 +37,17 @@ names(raw_data)
 # removing NA (30%)
 ```
 
+```{r preprocess_covariates}
+# Delete *C rows and store them for validation in further
+c_rows <- grep(pattern = 'C', x = rownames(raw_data$covariates), value = TRUE)
+processed_covariates <- raw_data$covariates[-which(rownames(raw_data$covariates) %in% c_rows), ]
+
+# Check
+print (length(rownames(raw_data$covariates)))
+print (length(c_rows))
+print (length(processed_covariates))
+```
+
 ```{r exploring_dataset}
 #
 #
