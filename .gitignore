@@ -5,3 +5,5 @@
 dataset/*
 bash.exe.stackdump
 *.rds
+*.html
+*.pdf
